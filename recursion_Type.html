@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Recursion Type</title>
+     <script>
+         let money =100;
+         let apple =0;
+         function bayApple(x){
+          if(x>0){
+               console.log('I have ', x, "RS Bay apple ", apple);
+               moreApple(x)
+          }else{
+               console.log("I Dont't have money");
+          }
+
+         }
+        function moreApple(x){
+          apple++
+          bayApple(x-10)
+        }
+
+        bayApple(money)
+     </script>
+
+
+</head>
+<body>
+     <h2>indirect Recursion</h2>
+</body>
+</html>

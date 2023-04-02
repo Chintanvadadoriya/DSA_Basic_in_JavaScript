@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Linked List</title>
+     <script>
+     function LinkList(data){
+          let head ={
+               value:data,
+               next:null
+          }
+          let tail =head
+          
+          function tailFun(t){
+               let c ={
+                    value:t,
+                    next:null
+               }
+               head.next=c
+               tail=c
+
+          }
+          console.warn(tailFun(200)); 
+          // console.warn(tailFun(300)); 
+          // console.warn(tailFun(400)); 
+          // console.warn(tailFun(500)); 
+          // console.warn(tailFun(600)); 
+
+        
+
+          console.warn(head);
+          console.warn(tail);
+
+        
+         
+     }
+    console.log(LinkList(100)); 
+     </script>
+</head>
+<body>
+     <h1>Linked List</h1>
+     
+</body>
+</html>
+

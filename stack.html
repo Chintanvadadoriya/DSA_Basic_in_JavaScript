@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Stack</title>
+     <script>
+          let data = [];
+          let currentSize = data.length
+          let max = 5
+
+          console.log(data);
+          console.log(currentSize);
+
+          function push(newvalue) {
+               if(currentSize>=max){
+
+                    alert(`Stack is Full you can not add ${newvalue}`)
+               }else{
+
+                    data[currentSize] = newvalue
+                    currentSize+=1
+               }
+          }
+           
+          function pop(){
+               if(currentSize>0){
+                    // console.log('currentSize pela:>> ', currentSize);
+                    currentSize-=1
+                    // console.log('currentSize vachama:>> ', currentSize-2);
+                 data.length=currentSize
+               //   console.log('currentSize selle:>> ', currentSize);
+
+               }else{
+                    alert("Stack is already empty")
+               }
+          }
+
+          push(10)
+          push(20)
+          push(30)
+          push(40)
+          push(50)
+          // push(60)
+          pop()
+          
+    
+
+
+          console.log(data);
+
+
+     </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

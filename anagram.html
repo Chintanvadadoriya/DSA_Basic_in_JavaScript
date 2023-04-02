@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Anegram</title>
+     <script>
+
+
+          // s1=s1.split('')
+          // s2=s2.split('')
+          // console.log('s1,s2 :>> ', s2,s1);
+          // if(s1.length == s2.length){
+          //   for(let i =0;i<=s1.length-1;i++){
+          //      for(let j =i+1;j<=s2.length-1;j++){
+          //      console.log(s1[i],s2[j]);
+
+          //   }
+
+          //   }
+          // }else{
+          //      console.warn(" s1 and s2 length is not same")
+          // }
+          // console.log(s1.includes(s2));
+
+          function stringcheck(s1, s2) {
+               let s1Obj = {}
+               if (s1.length !== s2.length) {
+                    return false;
+               }
+
+               for (ch of s1) {
+                    s1Obj[ch] = (s1Obj[ch] || 0) +1
+               }
+               console.warn(s1Obj);
+               for (ch of s2) {
+                    // console.log(ch);
+                    if(!s1Obj[ch]){
+                         return false
+                    }
+                    s1Obj[ch]--
+               }
+               return true;
+
+          }
+          let s1 = "hello"
+          let s2 = "ohell"
+          console.warn(stringcheck(s1, s2)) 
+
+
+
+     </script>
+</head>
+
+<body>
+     <h1>Anegram</h1>
+</body>
+
+</html>

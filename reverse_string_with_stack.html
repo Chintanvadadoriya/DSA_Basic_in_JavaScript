@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Reverse String</title>
+     <script>
+          let data = [];
+          let currentSize = data.length
+          console.log(data);
+
+          function push(newvalue) {
+               data[currentSize] = newvalue
+               currentSize += 1
+          }
+          function pop(q) {
+               
+               lastRemoveitem=data[currentSize-1]
+               currentSize -= 1
+               data.length=currentSize
+               return lastRemoveitem
+          }
+
+          function reverseStr(items) {
+               for(let i=0;i<items.length; i++){
+                    push(items[i])
+               }
+               // push(items)
+               // console.log(items);
+               for(let i=0;i<items.length; i++){
+                    console.log(items,"qq");
+                    //use call reference function
+                    items[i]=pop()
+               }
+
+          }
+          let str = 'anil'
+          
+          str = str.split('')
+          reverseStr(str)
+          console.log('str :>> ', str.join(""));
+          // console.log(str);
+          // console.log("push in stack",data);
+     </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

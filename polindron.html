@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Polindron</title>
+     <Script>
+          let s = 'nayan'
+           s=s.split('')
+          // console.log(s);
+          let start=[]
+          let end=[]
+    
+     for(let i=0;i<=s.length-1;i++){
+          // console.log(s[i]);
+          start.push(s[i])
+
+     }
+     for(let j=s.length-1;j>=0;j--){
+          // console.log(',',s[i]);
+          end.push(s[j])
+
+     }
+
+console.warn(start);
+console.warn('/',end)
+if(start.join() ===  end.join()){
+     console.warn("yaa same che bhai")
+}else{
+     console.warn("same nathi aa string ")
+}
+     </Script>
+</head>
+<body>
+     <h1>Polindron string</h1>
+</body>
+</html>

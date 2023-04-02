@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=, initial-scale=1.0">
+     <title>Map</title>
+     <script>
+          let data =new Map([
+               ["name","chintan"],
+               [true,"bool"],
+               [33,"num"],
+               [undefined,'not']
+          ])
+          data.set("color","red")
+          // console.warn(data.size);
+          // console.warn(data.has(33));
+          // console.warn(data.get(33));
+
+          // data.clear()
+          // for(x of data){
+          //      console.warn(x);
+          // }
+          // data.forEach((k,v)=>{
+          //      console.warn(k);
+          // })
+
+          data.delete("name")
+
+
+          console.warn(data);
+     </script>
+</head>
+<body>
+     <h1>MAp DSA</h1>
+</body>
+</html>

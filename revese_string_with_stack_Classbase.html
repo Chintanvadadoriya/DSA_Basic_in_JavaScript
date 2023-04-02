@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Stack With Class</title>
+     <script>
+          class Stack{
+               item =[]
+               currentSize;
+               maxSize;
+               constructor(size){
+                    // console.log(this,"size:",size);
+                    this.maxSize=size;
+                    this.currentSize=this.item.length
+                    
+               }
+
+
+               push(newvalue){
+                    // console.log('newvalue :>> ', newvalue);
+                    // console.log('newvalue length :>> ', newvalue.length-1);
+
+                    for(let i = newvalue.length-1;i>=0;i--){
+                         // console.log('object :>> ', newvalue[i]);
+                         this.item[this.currentSize] =newvalue[i]
+                         this.currentSize+=1
+                    }
+                    
+               }
+               display(){
+                    console.warn(this.item.join(""))
+               }
+
+          }
+
+          let data='anil'
+          st1=new Stack(200)
+          st1.push(data.split(""))
+          st1.display()
+          
+     </script>
+</head>
+<body>
+     
+</body>
+</html>

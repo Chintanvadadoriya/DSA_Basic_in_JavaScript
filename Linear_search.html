@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Linear Search</title>
+     <script>
+          // let data=[1,2,3,4,5,6,7,8,9,10]
+          // let find=2;
+          // let pos=undefined;
+          // for(let i=0;i<=data.length;i++){
+          //      if(data[i]==find){
+          //           pos=i
+          //           break
+          //      }
+          // }
+          // console.warn(pos)
+       
+
+          function searchEl(){
+
+               let data=[1,2,3,4,5,6,7,8,9,10]
+     
+               let find=document.getElementById("id").value;
+               let pos=undefined;
+               for(let i=0;i<=data.length;i++){
+                    if(data[i]==find){
+                         pos=i
+                         break
+                    }
+               }
+               alert('position is    ' + pos)
+               document.getElementById("id").value='';
+               if(!pos){
+                    alert('Record not found')
+               }
+          } 
+     </script>
+</head>
+<body>
+    <h1>Linear Search</h1> 
+    <input type="text" id="id" placeholder="enter element"/>
+    <button onclick="searchEl()">Search</button>
+</body>
+</html>

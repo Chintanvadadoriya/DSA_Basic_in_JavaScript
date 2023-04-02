@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Max Char IN String</title>
+     <script>
+          // function maxStr(s1){
+          //      let Obj={}
+          //      for(ch of s1){
+          //       Obj[ch]=(Obj[ch]||0)+1
+          //       }
+          //      //  console.log(Object.entries(Obj));
+          //      let data =Object.entries(Obj)
+          //      let d =data.map(([key,val])=>{
+          //           console.log('key,val :>> ', key,val);
+          //           if(val>1){
+          //                console.log('val, :>> ', key,val);
+                         
+          //           }
+          //      })
+
+          // }
+          // let s1="hello"
+
+          
+          // console.warn(maxStr(s1));
+
+          let s1 ="hello"
+          let maxv=''
+          let Obj = {}
+
+          for(let i =0;i<=s1.length-1;i++){
+               console.log(s1[i]);
+               if(!Obj[s1[i]]){
+                    Obj[s1[i]]=0
+               }
+               Obj[s1[i]]++
+
+               if(maxv == '' || Obj[s1[s1[i]]] >Obj[maxv]){
+                    maxv=s1[i]
+               }
+          }
+          console.warn(maxv);
+        
+     </script>
+
+</head>
+<body>
+     <h1>Maximum occure Charecter in String</h1>
+</body>
+</html>

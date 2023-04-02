@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Array Insert</title>
+</head>
+<script>
+     // let data =[10,20,30,40,50];
+     // let ele = 60;
+     // let position =2
+     // console.log(data);
+     // for(i=data.length -1; i>=1; i--){
+     //      if(i>=position){
+     //           data[i+1]=data[i]
+     //           if(i ==position){
+     //                data[i]=ele
+     //           }
+     //      }
+     // }
+     // console.log(data);
+
+     function insertElement() {
+          let data = [10, 20, 30, 40, 50];
+          let positionId =document.getElementById('position').value
+          positionId=parseInt(positionId)
+          let newEleId =document.getElementById('newele').value
+          newEleId=parseInt(newEleId)
+          if(positionId && newEleId){
+
+               let ele = newEleId;
+               let position = positionId
+               console.log(data);
+               for (i = data.length - 1; i >= 1; i--) {
+     
+                    if (i >= position) {
+                         data[i + 1] = data[i]
+                         if (i == position) {
+                              data[i] = ele
+                         }
+                    }
+               }
+               console.log(data);
+          }else{
+              alert('please enter valid value')
+          }
+
+     }
+
+</script>
+
+<body>
+     <input type="text" placeholder="enter position" id="position" />
+     <input type="text" placeholder="enter newEle" id="newele" />
+     <button onclick="insertElement()">NewAddElement</button>
+
+</body>
+
+</html>

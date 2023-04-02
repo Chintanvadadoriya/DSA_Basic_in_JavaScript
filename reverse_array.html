@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Revese array</title>
+     <script>
+          let data = [1,2,3,4,5,6,7,8,9]
+          // let d1 = 0
+
+          // function reverceArray(data,start,end){
+          //      console.log(data);
+          //      if(start<=end){
+
+          //           d1 =data[start]
+          //           data[start] =data[end]
+          //           data[end]=d1
+          //           reverceArray(data,start+1,end-1)
+          //      }
+          // }
+          // reverceArray(data, 0,data.length-1)
+
+          // data.reverse()
+          // console.log(data);
+
+
+
+          for(let i=data.length-1 ;i>0; i--){
+               console.log('data[i] :>> ', data[i]); 
+               data.push(i)             
+               data.shift(i)
+          }
+          console.log(data);
+      
+
+     </script>
+</head>
+<body>
+     
+</body>
+</html>

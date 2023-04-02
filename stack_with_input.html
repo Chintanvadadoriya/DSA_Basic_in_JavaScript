@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Stack</title>
+     <script>
+          let data = [];
+          let currentSize = data.length
+          let max = 5
+
+          console.log(data);
+          console.log(currentSize);
+
+          function push() {
+               let newvalue =document.getElementById('stackId').value
+
+               console.log('newvalueBtn :>> ', newvalue);
+               if(currentSize>=max){
+
+                    alert(`Stack is Full you can not add ${newvalue}`)
+               }else{
+               console.log('inside :>> ', newvalue);
+
+                
+                    data[currentSize] = +newvalue
+                    currentSize+=1
+                    console.log('data :>> ', data);
+                newvalue =document.getElementById('stackId').value=""
+
+               }
+          }
+
+          console.log(data);
+           
+          function pop(){
+               console.log('call thay che pop method :>> ');
+               console.log('data ni ander che pop function  ', data);
+               if(currentSize>0){
+                    currentSize-=1
+                 data.length=currentSize
+
+               }else{
+                    alert("Stack is already empty")
+               }
+          }
+
+         function showData(){
+          console.log('showData call thay che :>> ', showData);
+          document.getElementById("show").innerHTML = data
+         }
+
+     </script>
+</head>
+
+<body>
+     <input type="text" placeholder="Enter Value" id="stackId" />
+     <button onclick="push()">Push</button>
+     <button onclick="pop()">Pop</button>
+     <button onclick="showData()">Show</button>
+     <div id="show"> 
+
+     </div>
+
+
+</body>
+
+</html>
